@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import './searchInput.css'; // Asegúrate de tener este archivo
 
 export default function Home() {
   const [input, setInput] = useState('');
@@ -30,48 +31,27 @@ export default function Home() {
   };
 
   return (
-    <main style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-      <h1 style={{ fontSize: '2rem', fontWeight: 900, letterSpacing: -1  }}>BUSCAR PROSPECTOS</h1>
-      <p style={{ marginBottom: '1rem', color: '#333' }}>
-        Escribe el nombre completo o número de teléfono del prospecto:
+    <main className="main-container">
+      <h1 className="title">BUSCA PROSPECTO</h1>
+      <p className="subtitle">
+        Verifica si el contacto está en el sistema:
       </p>
       <input
         type="text"
+        className="input-search"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Ej: Carlos ó 7871234567"
-        style={{
-          padding: '0.75rem',
-          borderRadius: '8px',
-          border: '1px solid #ccc',
-          width: '100%',
-          maxWidth: '400px',
-          marginBottom: '1rem',
-          fontSize: '1rem',
-        }}
       />
       <br />
       <button
+        className="search-button"
         onClick={handleSearch}
         disabled={loading}
-        style={{
-          background: '#000',
-          color: '#fff',
-          padding: '0.75rem 1.5rem',
-          border: 'none',
-          borderRadius: '6px',
-          fontSize: '1rem',
-          fontWeight: 600,
-          textTransform: 'uppercase',
-          letterSpacing: '0.5px',
-          cursor: 'pointer',
-        }}
       >
         {loading ? 'Buscando...' : 'Buscar'}
       </button>
-      {result && (
-        <p style={{ marginTop: '2rem', fontWeight: 500 }}>{result}</p>
-      )}
+      {result && <p className="result">{result}</p>}
     </main>
   );
 }
