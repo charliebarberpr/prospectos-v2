@@ -48,6 +48,7 @@ export default function Home() {
           maxWidth: '400px',
           marginBottom: '1rem',
           fontSize: '1rem',
+          outline: '2px solid #26433C',
         }}
       />
       <br />
