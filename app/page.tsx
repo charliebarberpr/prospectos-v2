@@ -63,9 +63,10 @@ export default function Home() {
           borderRadius: '6px',
           fontSize: '1rem',
           cursor: 'pointer',
+          fontWeight: 700',
         }}
       >
-        {loading ? 'Buscando...' : 'Buscar'}
+        {loading ? 'BUSCANDO...' : 'BUSCAR'}
       </button>
       {result && (
         <p style={{ marginTop: '2rem', fontWeight: 500 }}>{result}</p>
