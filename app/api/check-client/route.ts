@@ -6,8 +6,8 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const searchInput = searchParams.get('name')?.toLowerCase();
 
-  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-  const LOCATION_ID = process.env.NEXT_PUBLIC_LOCATION_ID;
+  const API_KEY = process.env.API_KEY;
+  const LOCATION_ID = process.env.LOCATION_ID;
 
   if (!API_KEY || !LOCATION_ID || !searchInput) {
     return NextResponse.json({ found: false, error: 'Faltan variables necesarias.' });
