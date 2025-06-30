@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <main style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-      <h1 style={{ fontSize: '2rem', fontWeight: 700 }}>Buscar Prospecto</h1>
+      <h1 style={{ fontSize: '2rem', fontWeight: 900, fontSpacing: -1  }}>BUSCAR PROSPECTO</h1>
       <p style={{ marginBottom: '1rem', color: '#333' }}>
         Escribe el nombre completo o número de teléfono del prospecto:
       </p>
@@ -39,7 +39,7 @@ export default function Home() {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Ej: Carlos o 7871234567"
+        placeholder="Ej: Carlos ó 7871234567"
         style={{
           padding: '0.75rem',
           borderRadius: '8px',
