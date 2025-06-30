@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <main style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-      <h1 style={{ fontSize: '2rem', fontWeight: 900, letterSpacing: -1  }}>BUSCAR PROSPECTO</h1>
+      <h1 style={{ fontSize: '2rem', fontWeight: 900, letterSpacing: -1  }}>BUSCAR PROSPECTOS</h1>
       <p style={{ marginBottom: '1rem', color: '#333' }}>
         Escribe el nombre completo o número de teléfono del prospecto:
       </p>
