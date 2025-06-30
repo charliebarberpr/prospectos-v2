@@ -57,8 +57,6 @@ export default function Home() {
         disabled={loading}
         style={{
           background: '#000',
-          hover: {
-          background: '#333'
           color: '#fff',
           padding: '0.75rem 1.5rem',
           border: 'none',
