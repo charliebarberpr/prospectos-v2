@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <main style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-      <h1 style={{ fontSize: '2rem', fontWeight: 900, fontSpacing: -1  }}>BUSCAR PROSPECTO</h1>
+      <h1 style={{ fontSize: '2rem', fontWeight: 900, letterSpacing: -1  }}>BUSCAR PROSPECTO</h1>
       <p style={{ marginBottom: '1rem', color: '#333' }}>
         Escribe el nombre completo o número de teléfono del prospecto:
       </p>
@@ -57,16 +57,20 @@ export default function Home() {
         disabled={loading}
         style={{
           background: '#000',
+          hover: {
+          background: '#333'
           color: '#fff',
           padding: '0.75rem 1.5rem',
           border: 'none',
           borderRadius: '6px',
           fontSize: '1rem',
+          fontWeight: 600,
+          textTransform: 'uppercase',
+          letterSpacing: '0.5px',
           cursor: 'pointer',
-          fontWeight: 700',
         }}
       >
-        {loading ? 'BUSCANDO...' : 'BUSCAR'}
+        {loading ? 'Buscando...' : 'Buscar'}
       </button>
       {result && (
         <p style={{ marginTop: '2rem', fontWeight: 500 }}>{result}</p>
